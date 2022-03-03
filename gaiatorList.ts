@@ -1,4 +1,3 @@
-//typescript
 import { UserSession, AppConfig } from '@stacks/auth';
 import { Storage } from '@stacks/storage';
 
@@ -6,19 +5,14 @@ import { Storage } from '@stacks/storage';
 -----------------------------------------
  The GAIATOR by Trubit : The Lister
 -----------------------------------------
-To do:
- 1. ES6 Typescript proper config/setup.
- 2. Function has to work asynchronously.
------------------------------------------
 */
-function getFileList(aStorage: Storage) {
-  const files: Promise<string | undefined | ArrayBuffer | null>[] = [];
-  aStorage.listFiles((filename: string) => {
+async function getFileList(aStorage: Storage) {
+  let files = Array();
+  await aStorage.listFiles((filename: string) => {
     files.push(filename);
-    console.log(filename);  // until callback/async/await works, for now display each file name.
     return true;            // return true to continue iterating, until end of list.
   });
-  return files;             // return array of file names. (but does not work yet)
+  return files;             // return array of file names
 }
 
 /*
@@ -36,10 +30,11 @@ userSession.store.getSessionData().userData = <any> {appPrivateKey: privateKey,}
 // 3. Instantiate and connect to Gaia hub
 const storage = new Storage({ userSession });
 
-//4. Call the gaiaLister. But async/await does not work yet.
-const fileList = await getFileList(storage);
-console.log(fileList);
+//4. Call the gaiaLister passing storage
+console.log('\nGetting file list, hang tight...');
+const fileList = await getFileList(storage);  //function return includes a Promise object. Need to handle it somehow.
+console.log('\nfileList=' + fileList);
 
-// Display session data, including app/user Gaia address.
-console.log('\n\n' + userSession.store.getSessionData());
-console.log('\n\n' + JSON.stringify(userSession));
+//5. Display session data, including app/user Gaia address.
+console.log('\n' + JSON.stringify(userSession));
+

@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+      "noEmit": false,  //when set to true did not produce .js files
+      "target": "es2020",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "lib": [
+        "dom",
+        "esnext"
+      ],
+      "importHelpers": false,
+      "declaration": true,
+      "sourceMap": false,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "pretty": true,
+      "removeComments": true,
+      "noImplicitAny": true,
+      "strictFunctionTypes": true,
+      "noImplicitThis": true,
+      "alwaysStrict": true,
+      "stripInternal": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "emitDecoratorMetadata": false,
+      "experimentalDecorators": true,
+      "allowSyntheticDefaultImports": true,
+      "suppressImplicitAnyIndexErrors": false,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "strictNullChecks": true
+    }
+  }

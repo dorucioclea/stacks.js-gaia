@@ -1,22 +1,18 @@
-//typescript
 import { UserSession, AppConfig } from '@stacks/auth';
 import { Storage } from '@stacks/storage';
 
 /*
 --------------------------------------
  The GAIATOR by Trubit : The Creator
- --------------------------------------
- To do:
- 1. ES6 Typescript proper config/setup.
- 2. Function has to work asynchronously.
 --------------------------------------
 */
-function createFile(aStorage: Storage, aFileName: string, aData) { 
-  const fileUrl = aStorage.putFile(aFileName, aData, {       //Promise? await? async?
+
+async function createFile(aStorage: Storage, aFileName: string, aData: string) { 
+  let fileUrl = await aStorage.putFile(aFileName, aData, {      
     encrypt: true,
     dangerouslyIgnoreEtag: true,  //overwrite file if it exists
   });
-  console.log('\n\n[fileUrl]=' + fileUrl);
+  return fileUrl;
 }
 
 /*
@@ -39,18 +35,9 @@ userSession.store.getSessionData().userData = <any> {appPrivateKey: privateKey,}
 const storage = new Storage({ userSession });
 
 //4. Call the gaiaCreator. But async/await does not work yet.
-const fileUrl = createFile(storage, aFileName, aData);
-console.log('\n\n[fileUrl]=' + fileUrl);
+const newFileUrl = await createFile(storage, aFileName, aData);
+console.log('\n[newFileUrl]=' + newFileUrl);
 
+//5. Display session data, including app/user Gaia address.
+console.log('\n' + JSON.stringify(userSession));
 
-//----------------------------------------------------
-// This works, same code as the createFile() function.
-const fileUrl2 = await storage.putFile((aFileName + '2'), aData, {
-  encrypt: true,
-  dangerouslyIgnoreEtag: true,  //overwrite file if it exists
-});
-console.log('\n\n[fileUrl2]=' + fileUrl2);
-
-//----------------------------------------------------
-// Display session data, including app/user Gaia address.
-console.log('\n\n[usersession]=' + JSON.stringify(userSession));
