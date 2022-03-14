@@ -2,7 +2,7 @@
 
 
 ## The GAIATOR by Trubit - *a Storage class utility*
-A lightweight extensions of Storage functions : putfile(), getFile(), listFiles() and deleteFile().    
+A lightweight extension of Storage functions : putfile(), getFile(), listFiles() and deleteFile().    
   
 The GAIATOR module : ```gaiator.ts```    
   
