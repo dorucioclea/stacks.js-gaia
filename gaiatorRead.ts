@@ -1,18 +1,11 @@
 import { UserSession, AppConfig } from '@stacks/auth';
 import { Storage } from '@stacks/storage';
+import { readFile } from './gaiator.js';  // Trubit GAIATOR
 
 /*
 -----------------------------------------
  The GAIATOR by Trubit : The Reader
 -----------------------------------------
-To do : handle file not found, statusCode=404
- */
-
-async function readFile(aStorage: Storage, aFileName: string) {
-  var fileContent = await aStorage.getFile(aFileName); 
-  return fileContent;
-}
-
 /*
  How to use function readFile()
 */
@@ -29,8 +22,8 @@ userSession.store.getSessionData().userData = <any> {appPrivateKey: privateKey,}
 // 3. Instantiate and connect to Gaia hub
 const storage = new Storage({ userSession });
 
-//4. Call the gaiaReader. But async/await does not work yet.
-var fileContent2 = await readFile(storage, aFileName);
+//4. Call function readFile() 
+var fileContent2 = await readFile({ aStorage: storage, aFileName: aFileName });
 console.log('\n[fileContent]=' + fileContent2);
 
 //5. Display session data, including app/user Gaia address.
