@@ -2,10 +2,10 @@
 
 
 ## The GAIATOR by Trubit - *a Storage class utility*
-Extensions of Storage functions : putfile(), getFile(), listFiles() and deleteFile().
-
-
-
+A lightweight extensions of Storage functions : putfile(), getFile(), listFiles() and deleteFile().    
+  
+The GAIATOR module : ```gaiator.ts```    
+  
 ### Test examples:
 
 1. Put file : ```node gaiatorCreate.js```
@@ -14,9 +14,9 @@ Extensions of Storage functions : putfile(), getFile(), listFiles() and deleteFi
 
 3. List files : ```node gaiatorList.js```
 
-4. Delete file : ```node gaiatorDelete.js```     
+4. Delete file : ```node gaiatorDelete.js```  
 
-
+  
 ### Sample Gaia file
 
 Complete URL:
