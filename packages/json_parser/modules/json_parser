@@ -1,0 +1,42 @@
+# ---------------------------------------------------------------------------------------------
+#  Utility tool to parse and transform files from data sources - e.g. Facebook, Google, etc.
+#   - convert JSON to CSV
+#   - transform a JSON to another JSON schema
+# ---------------------------------------------------------------------------------------------
+
+# Status : in-progress
+
+import json
+import pandas as pd
+
+def read_json(filename: str) -> dict:
+    try:
+        with open(filename, "r") as f:
+            data = json.loads(f.read())
+    except:
+        raise Exception(f"Reading {filename} file encountered an error")
+    return data
+
+def create_dataframe(data: list) -> pd.DataFrame:
+    df = pd.DataFrame()  # dataframe for accumulating json fields
+    for d in data:           # Looping through each record
+        # Normalize the column levels
+        print("dartman=", d)
+        record = pd.json_normalize(d)
+        df = dataframe.append(record, ignore_index=True)  # Append it to the dataframe
+    return df
+
+
+def main():
+
+    filename = "../data/customer1.json"
+
+    # Read the JSON file into a Python dictionary
+    data = read_json(filename)
+    print("\ndartman=", data)
+    df = pd.json_normalize(data)
+    df.to_csv("details.csv", index=False)  # Convert dataframe to CSV
+
+
+if __name__ == '__main__':
+    main()

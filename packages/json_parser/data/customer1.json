@@ -1,0 +1,72 @@
+{
+  "type": "person",
+  "id": 1,
+  "basicInfo": {
+    "demographics": {
+      "age": "20,25",
+      "gender": "male/female/customString",
+      "income": "100000",
+      "educationType": "HS/BA/BS/MS/PHD/Trade/customString",
+      "relationshipStatus": "married/single/divorced/"
+    },
+    "contactInfo": {
+      "email": "fake@nothing.com",
+      "telephone": "(425) 123-4567",
+      "languagePreference": "Hindi",
+      "deviceTypes": [
+        "iphone",
+        "macbook",
+        "samsung galaxy"
+      ]
+    }
+  },
+  "interests": {
+    "generalInterests": {
+      "adInterests": "dessert",
+      "topic": "art",
+      "adsViewed": "?"
+    },
+    "music": "classical",
+    "books": "book of love",
+    "tv": "i love lucy",
+    "movies": "batman"
+  },
+  "purchases": {
+    "generalPurchasingBehavior": {
+      "preferredCurrency": "USD",
+      "paymentMethodsUsed": [
+        "cash",
+        "creditCard"
+      ],
+      "loyaltyMerchantName": "?"
+    },
+    "categoriesShopped": {
+      "merchantCategoriesShopped": "?",
+      "merchantSubcategoriesShopped": "?"
+    },
+    "spendAndTimeSeries": {
+      "amountSpent": "100",
+      "averageTicketSize": "?",
+      "growthInSpend": "?"
+    }
+  },
+  "locational": {
+    "generalLocation": {
+      "primaryLocation": "?",
+      "hometown": "?",
+      "followedLocations": "?"
+    },
+    "hyperLocal": {
+      "locationsVisited": [
+        "NYC",
+        "Las Vegas",
+        "Disneyworld"
+      ]
+    }
+  },
+  "colleague": [
+    "personId1",
+    "personID2"
+  ]
+
+}

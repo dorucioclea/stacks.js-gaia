@@ -1,0 +1,17 @@
+import { readFileSync } from 'fs';
+import { UserSession, AppConfig } from '@stacks/auth';
+import { Storage } from '@stacks/storage';
+import { putFileEncrypted, putFileEncryptedNot } from './gaiator.js';
+const privateKey = '2e0f1b1b5b2dd054fcc176d5b8e82e0425cec26e555d108298a7e16a8853e7a9';
+const appConfig = new AppConfig(['store_write', 'publish_data'], 'trubit');
+const userSession = new UserSession({ appConfig });
+userSession.store.getSessionData().userData = { appPrivateKey: privateKey, };
+const fileEncrypted = 'customer_data/sample_01_encrypted.json';
+const fileUnencrypted = 'customer_data/sample_01_unencrypted.json';
+const customerFile = "../../data/customer/data/customer_data_sample_03.json";
+const customerData = readFileSync(customerFile, "utf8");
+const storage = new Storage({ userSession });
+const urlFileEncrypted = await putFileEncrypted({ aStorage: storage, aFileName: fileEncrypted, aData: customerData });
+console.log('\n[urlFileEncrypted]=' + urlFileEncrypted);
+const urlFileEncryptedNot = await putFileEncryptedNot({ aStorage: storage, aFileName: fileUnencrypted, aData: customerData });
+console.log('\n[urlFileEncryptedNot]=' + urlFileEncryptedNot);

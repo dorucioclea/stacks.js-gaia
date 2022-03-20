@@ -1,0 +1,268 @@
+{
+  "customers": [
+    {
+      "type": "customer",
+      "id": 1,
+      "colleague": [
+        2,
+        3
+      ],
+      "basicInfo": {
+        "demographics": {
+          "age": "21-25",
+          "gender": "MALE",
+          "income": 100000,
+          "educationType": "College",
+          "relationshipStatus": "divorced"
+        },
+        "contactInfo": {
+          "email": "fake@nothing.com",
+          "telephone": "(425) 123-4567",
+          "languagePreference": "English",
+          "deviceTypes": [
+            "iphone",
+            "macbook",
+            "samsung galaxy"
+          ]
+        }
+      },
+      "interests": {
+        "generalInterests": {
+          "adInterests": "Action Games",
+          "topic": "Woodworking",
+          "adsViewed": "TBD - JSON object"
+        },
+        "music": "classical",
+        "books": "book of love",
+        "tv": "i love lucy",
+        "movies": "The Batman"
+      },
+      "purchases": {
+        "generalPurchasingBehavior": {
+          "preferredCurrency": "USD",
+          "paymentMethodsUsed": [
+            "cash",
+            "creditCard"
+          ],
+          "loyaltyMerchantName": "xxx"
+        },
+        "categoriesShopped": {
+          "merchantCategoriesShopped": "xxx",
+          "merchantSubcategoriesShopped": "xxx"
+        },
+        "spendAndTimeSeries": {
+          "amountSpent": 100,
+          "averageTicketSize": 100,
+          "growthInSpend": 99
+        }
+      },
+      "locational": {
+        "generalLocation": {
+          "primaryLocation": "xxx",
+          "hometown": "xxx",
+          "followedLocations": "xxx"
+        },
+        "hyperLocal": {
+          "locationsVisited": [
+            "NYC",
+            "Las Vegas",
+            "Disneyworld"
+          ]
+        }
+      }
+    },
+    {
+      "type": "customer",
+      "id": 2,
+      "colleague": [
+        1
+      ],
+      "basicInfo": {
+        "demographics": {
+          "age": "21-25",
+          "gender": "FEMALE",
+          "income": 200000,
+          "educationType": "University",
+          "relationshipStatus": "single"
+        },
+        "contactInfo": {
+          "email": "one@email.com",
+          "telephone": "(201) 433-4224",
+          "languagePreference": "Hindi",
+          "deviceTypes": [
+            "iphone",
+            "samsung galaxy"
+          ]
+        },
+        "interests": {
+          "generalInterests": {
+            "adInterests": "amazon.com",
+            "topic": "Metalworking",
+            "adsViewed": "TBD - JSON object"
+          },
+          "music": "classical",
+          "books": "book of love",
+          "tv": "seinfeld",
+          "movies": "V for vendetta"
+        },
+        "purchases": {
+          "generalPurchasingBehavior": {
+            "preferredCurrency": "PHP",
+            "paymentMethodsUsed": [
+              "cash"
+            ],
+            "loyaltyMerchantName": "xxx"
+          },
+          "categoriesShopped": {
+            "merchantCategoriesShopped": "xxx",
+            "merchantSubcategoriesShopped": "xxx"
+          },
+          "spendAndTimeSeries": {
+            "amountSpent": 500,
+            "averageTicketSize": 150,
+            "growthInSpend": 99
+          }
+        },
+        "locational": {
+          "generalLocation": {
+            "primaryLocation": "xxx",
+            "hometown": "xxx",
+            "followedLocations": "xxx"
+          },
+          "hyperLocal": {
+            "locationsVisited": "['Disneyland']"
+          }
+        }
+      }
+    },
+    {
+      "type": "customer",
+      "id": 2,
+      "colleague": [
+        1
+      ],
+      "basicInfo": {
+        "demographics": {
+          "age": "21-25",
+          "gender": "FEMALE",
+          "income": 200000,
+          "educationType": "University",
+          "relationshipStatus": "single"
+        },
+        "contactInfo": {
+          "email": "one@email.com",
+          "telephone": "(201) 433-4224",
+          "languagePreference": "Hindi",
+          "deviceTypes": [
+            "iphone",
+            "samsung galaxy"
+          ]
+        },
+        "interests": {
+          "generalInterests": {
+            "adInterests": "amazon.com",
+            "topic": "Metalworking",
+            "adsViewed": "TBD - JSON object"
+          },
+          "music": "classical",
+          "books": "book of love",
+          "tv": "seinfeld",
+          "movies": "V for vendetta"
+        },
+        "purchases": {
+          "generalPurchasingBehavior": {
+            "preferredCurrency": "PHP",
+            "paymentMethodsUsed": [
+              "cash"
+            ],
+            "loyaltyMerchantName": "xxx"
+          },
+          "categoriesShopped": {
+            "merchantCategoriesShopped": "xxx",
+            "merchantSubcategoriesShopped": "xxx"
+          },
+          "spendAndTimeSeries": {
+            "amountSpent": 500,
+            "averageTicketSize": 150,
+            "growthInSpend": 99
+          }
+        },
+        "locational": {
+          "generalLocation": {
+            "primaryLocation": "xxx",
+            "hometown": "xxx",
+            "followedLocations": "xxx"
+          },
+          "hyperLocal": {
+            "locationsVisited": [
+              "Disneyland"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "customer",
+      "id": 3,
+      "colleague": [
+        1
+      ],
+      "basicInfo": {
+        "demographics": {
+          "age": "21-25",
+          "gender": "MALE",
+          "income": 1000000,
+          "educationType": "College",
+          "relationshipStatus": "married"
+        },
+        "contactInfo": {
+          "email": "two@email.com",
+          "telephone": "(421) 123-5342",
+          "languagePreference": "French",
+          "deviceTypes": []
+        },
+        "interests": {
+          "generalInterests": {
+            "adInterests": "amazon.com",
+            "topic": "Metalworking",
+            "adsViewed": "TBD - JSON object"
+          },
+          "music": "classical",
+          "books": "book of love",
+          "tv": "seinfeld",
+          "movies": "V for vendetta"
+        },
+        "purchases": {
+          "generalPurchasingBehavior": {
+            "preferredCurrency": "PHP",
+            "paymentMethodsUsed": [
+              "cash"
+            ],
+            "loyaltyMerchantName": "xxx"
+          },
+          "categoriesShopped": {
+            "merchantCategoriesShopped": "xxx",
+            "merchantSubcategoriesShopped": "xxx"
+          },
+          "spendAndTimeSeries": {
+            "amountSpent": 500,
+            "averageTicketSize": 150,
+            "growthInSpend": 99
+          }
+        },
+        "locational": {
+          "generalLocation": {
+            "primaryLocation": "xxx",
+            "hometown": "xxx",
+            "followedLocations": "xxx"
+          },
+          "hyperLocal": {
+            "locationsVisited": [
+              "Disneyland"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
